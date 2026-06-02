@@ -1,24 +1,24 @@
 import path from "node:path";
-import { KNOWLEDGE_MD, render } from "@claude-bootstrap/templates";
+import { KNOWLEDGE_MD, render } from "@themohitgaur1/templates";
 import { writeFileSafe, type WriteOptions } from "../util.js";
-import type { ProjectMetadata } from "@claude-bootstrap/scanner";
+import type { ProjectMetadata } from "@themohitgaur1/scanner";
 
 function topFrameworks(meta: ProjectMetadata): string {
   return meta.frameworks
     .slice(0, 6)
-    .map((f) => `- **${f.id}**${f.version ? ` \`${f.version}\`` : ""} — evidence: ${f.evidence.join(", ")}`)
+    .map((f) => `- **${f.id}**${f.version ? ` \`${f.version}\`` : ""}  Eevidence: ${f.evidence.join(", ")}`)
     .join("\n");
 }
 
 function topFolders(meta: ProjectMetadata): string {
   return meta.folders
     .slice(0, 10)
-    .map((f) => `- \`${f.path}/\` — ${f.fileCount} files`)
+    .map((f) => `- \`${f.path}/\`  E${f.fileCount} files`)
     .join("\n");
 }
 
 function services(meta: ProjectMetadata): string {
-  return meta.services.map((s) => `- **${s.name}** (\`${s.path}\`) — ${s.kind}`).join("\n");
+  return meta.services.map((s) => `- **${s.name}** (\`${s.path}\`)  E${s.kind}`).join("\n");
 }
 
 export async function generateKnowledge(

@@ -1,6 +1,6 @@
 {
-  "name": "@claude-bootstrap/generators",
-  "version": "1.0.0",
+  "name": "@themohitgaur1/generators",
+  "version": "1.0.1",
   "description": "Generates Claude Code agents, commands, hooks, skills, MCP configs, and knowledge files from scanner metadata.",
   "type": "module",
   "main": "./dist/index.js",
@@ -16,9 +16,10 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@claude-bootstrap/scanner": "workspace:*",
-    "@claude-bootstrap/templates": "workspace:*"
+    "@themohitgaur1/scanner": "workspace:*",
+    "@themohitgaur1/templates": "workspace:*"
   },
+  "publishConfig": { "access": "public" },
   "devDependencies": {
     "tsup": "^8.3.0",
     "typescript": "^5.6.0",

@@ -1,5 +1,5 @@
 import path from "node:path";
-import { COMMAND_MD, render } from "@claude-bootstrap/templates";
+import { COMMAND_MD, render } from "@themohitgaur1/templates";
 import { writeFileSafe, type CommandPack, type WriteOptions } from "../util.js";
 
 const COMMANDS: Record<CommandPack, { description: string; body: string }> = {

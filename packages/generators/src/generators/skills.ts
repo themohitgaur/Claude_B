@@ -1,7 +1,7 @@
 import path from "node:path";
-import { SKILL_MD, render } from "@claude-bootstrap/templates";
+import { SKILL_MD, render } from "@themohitgaur1/templates";
 import { writeFileSafe, type SkillPack, type WriteOptions } from "../util.js";
-import type { ProjectMetadata } from "@claude-bootstrap/scanner";
+import type { ProjectMetadata } from "@themohitgaur1/scanner";
 
 interface SkillDef {
   title: string;
@@ -32,7 +32,7 @@ const SKILLS: Record<SkillPack, SkillDef> = {
   typescript: {
     title: "TypeScript",
     description: "Strict TypeScript patterns.",
-    whenToUse: "Everywhere — strict mode is assumed.",
+    whenToUse: "Everywhere  Estrict mode is assumed.",
     bestPractices: ["No `any`", "Prefer `unknown` then narrow", "Discriminated unions for state"],
     patterns: ["Branded types for IDs", "Zod for runtime validation"],
     references: ["https://www.typescriptlang.org/docs"],
@@ -79,7 +79,7 @@ const SKILLS: Record<SkillPack, SkillDef> = {
   },
   testing: {
     title: "Testing",
-    description: "Unit → integration → e2e ladder.",
+    description: "Unit ↁEintegration ↁEe2e ladder.",
     whenToUse: "Anytime you change behavior.",
     bestPractices: ["AAA structure", "One assertion per test when practical"],
     patterns: ["Test data builders", "Fixtures over mocks"],

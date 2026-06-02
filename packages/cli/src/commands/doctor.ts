@@ -45,6 +45,7 @@ const CHECKS: Check[] = [
   {
     name: "Hook scripts executable",
     run: async (root) => {
+      if (process.platform === "win32") return { ok: true, detail: "skipped on Windows" };
       const dir = path.join(root, ".claude", "hooks");
       try {
         const entries = await fs.readdir(dir);
@@ -81,9 +82,9 @@ export async function runDoctor(opts: { cwd?: string } = {}): Promise<void> {
   let failures = 0;
   for (const c of CHECKS) {
     const res = await c.run(root);
-    if (res.ok) ui.ok(c.name + (res.detail ? ` — ${res.detail}` : ""));
+    if (res.ok) ui.ok(c.name + (res.detail ? `  E${res.detail}` : ""));
     else {
-      ui.err(`${c.name} — ${res.detail ?? "failed"}`);
+      ui.err(`${c.name}  E${res.detail ?? "failed"}`);
       failures++;
     }
   }
@@ -91,7 +92,7 @@ export async function runDoctor(opts: { cwd?: string } = {}): Promise<void> {
   ui.blank();
   if (failures === 0) ui.ok("All checks passed.");
   else {
-    ui.warn(`${failures} check(s) failed. Run \`npx claude-bootstrap sync\` to repair generated files.`);
+    ui.warn(`${failures} check(s) failed. Run \`npx @themohitgaur1/claude-bootstrap sync\` to repair generated files.`);
     process.exitCode = 1;
   }
 }

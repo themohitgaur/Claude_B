@@ -4,9 +4,9 @@ import {
   CLAUDE_MD,
   SETTINGS_JSON,
   render,
-} from "@claude-bootstrap/templates";
+} from "@themohitgaur1/templates";
 import { writeFileSafe, type WriteOptions } from "../util.js";
-import type { ProjectMetadata } from "@claude-bootstrap/scanner";
+import type { ProjectMetadata } from "@themohitgaur1/scanner";
 
 export async function generateRootFiles(
   root: string,

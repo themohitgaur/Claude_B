@@ -1,9 +1,9 @@
-# @claude-bootstrap/templates
+# @themohitgaur1/templates
 
-Inline string templates with a tiny `{{var}}` renderer. Used by `@claude-bootstrap/generators`.
+Inline string templates with a tiny `{{var}}` renderer. Used by `@themohitgaur1/generators`.
 
 ```ts
-import { render, CLAUDE_MD } from "@claude-bootstrap/templates";
+import { render, CLAUDE_MD } from "@themohitgaur1/templates";
 const md = render(CLAUDE_MD, { projectName: "acme", repoType: "fullstack" });
 ```
 

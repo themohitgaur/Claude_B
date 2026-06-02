@@ -1,6 +1,6 @@
 {
-  "name": "claude-bootstrap",
-  "version": "1.0.0",
+  "name": "@themohitgaur1/claude-bootstrap",
+  "version": "1.0.1",
   "description": "AI Workspace Generator for Claude Code — turn any repo into a configured Claude Code workspace in under a minute.",
   "type": "module",
   "bin": {
@@ -31,11 +31,11 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@claude-bootstrap/scanner": "workspace:*",
-    "@claude-bootstrap/generators": "workspace:*",
-    "@claude-bootstrap/templates": "workspace:*",
+    "@themohitgaur1/scanner": "workspace:*",
+    "@themohitgaur1/generators": "workspace:*",
+    "@themohitgaur1/templates": "workspace:*",
     "commander": "^12.1.0",
-    "inquirer": "^10.2.0",
+    "inquirer": "^12.11.1",
     "chalk": "^5.3.0",
     "ora": "^8.1.0"
   },
@@ -43,11 +43,11 @@
     "tsup": "^8.3.0",
     "typescript": "^5.6.0",
     "vitest": "^2.1.0",
-    "@types/node": "^22.7.0",
-    "@types/inquirer": "^9.0.7"
+    "@types/node": "^22.7.0"
   },
   "engines": { "node": ">=18.0.0" },
+  "publishConfig": { "access": "public" },
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/your-org/claude-bootstrap" },
-  "homepage": "https://github.com/your-org/claude-bootstrap#readme"
+  "repository": { "type": "git", "url": "https://github.com/themohitgaur1/claude-bootstrap" },
+  "homepage": "https://github.com/themohitgaur1/claude-bootstrap#readme"
 }

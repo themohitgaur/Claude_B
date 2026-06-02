@@ -1,7 +1,7 @@
 import path from "node:path";
 import ora from "ora";
-import { scan } from "@claude-bootstrap/scanner";
-import { recommendAgents, recommendSkills } from "@claude-bootstrap/generators";
+import { scan } from "@themohitgaur1/scanner";
+import { recommendAgents, recommendSkills } from "@themohitgaur1/generators";
 import { ui } from "../ui.js";
 
 export async function runAnalyze(opts: { cwd?: string; json?: boolean } = {}): Promise<void> {
@@ -23,11 +23,11 @@ export async function runAnalyze(opts: { cwd?: string; json?: boolean } = {}): P
 
   ui.title("Frameworks");
   for (const f of meta.frameworks) {
-    ui.step(`${f.id}${f.version ? ` @ ${f.version}` : ""} — confidence ${f.confidence.toFixed(2)}`);
+    ui.step(`${f.id}${f.version ? ` @ ${f.version}` : ""}  Econfidence ${f.confidence.toFixed(2)}`);
   }
 
   ui.title("Services");
-  for (const s of meta.services) ui.step(`${s.name} (${s.path}) — ${s.kind}`);
+  for (const s of meta.services) ui.step(`${s.name} (${s.path})  E${s.kind}`);
 
   ui.title("Recommended agents");
   for (const a of recommendAgents(meta)) ui.step(a);
@@ -36,5 +36,5 @@ export async function runAnalyze(opts: { cwd?: string; json?: boolean } = {}): P
   for (const s of recommendSkills(meta)) ui.step(s);
 
   ui.blank();
-  ui.info("Run `npx claude-bootstrap init` to generate the workspace.");
+  ui.info("Run `npx @themohitgaur1/claude-bootstrap init` to generate the workspace.");
 }

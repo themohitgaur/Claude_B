@@ -1,7 +1,7 @@
 import inquirer from "inquirer";
 import ora from "ora";
 import path from "node:path";
-import { scan, type ProjectMetadata, type RepoType } from "@claude-bootstrap/scanner";
+import { scan, type ProjectMetadata, type RepoType } from "@themohitgaur1/scanner";
 import {
   generateAgents,
   generateCommands,
@@ -18,7 +18,7 @@ import {
   type HookChoice,
   type McpChoice,
   type SkillPack,
-} from "@claude-bootstrap/generators";
+} from "@themohitgaur1/generators";
 import { ui } from "../ui.js";
 
 interface InitOptions {
@@ -135,7 +135,7 @@ export async function runInit(opts: InitOptions = {}): Promise<void> {
     ui.blank();
     ui.ok("Workspace ready.");
     ui.info("Next: open the repo in Claude Code. Try a slash command from .claude/commands/.");
-    ui.info(`Re-run anytime: ${chalkCmd("npx claude-bootstrap sync")}`);
+    ui.info(`Re-run anytime: ${chalkCmd("npx @themohitgaur1/claude-bootstrap sync")}`);
   } catch (err) {
     gen.fail("Generation failed");
     throw err;

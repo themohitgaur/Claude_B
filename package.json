@@ -11,7 +11,7 @@
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
     "clean": "pnpm -r exec rm -rf dist node_modules",
-    "cli": "pnpm --filter @claude-bootstrap/cli start"
+    "cli": "pnpm --filter @themohitgaur1/claude-bootstrap start"
   },
   "devDependencies": {
     "typescript": "^5.6.0",

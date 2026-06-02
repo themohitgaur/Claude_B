@@ -1,7 +1,7 @@
 import path from "node:path";
-import { HOOK_SH, render } from "@claude-bootstrap/templates";
+import { HOOK_SH, render } from "@themohitgaur1/templates";
 import { writeFileSafe, type HookChoice, type WriteOptions } from "../util.js";
-import type { ProjectMetadata } from "@claude-bootstrap/scanner";
+import type { ProjectMetadata } from "@themohitgaur1/scanner";
 
 interface HookDef {
   trigger: "PreToolUse" | "PostToolUse" | "TaskCompleted" | "SubagentStop";
@@ -32,7 +32,7 @@ const HOOKS: Record<HookChoice, HookDef> = {
   },
   "architecture-validation": {
     trigger: "SubagentStop",
-    body: () => `echo "Architecture validation hook — wire your dependency-cruiser/eslint-rules here."`,
+    body: () => `echo "Architecture validation hook  Ewire your dependency-cruiser/eslint-rules here."`,
   },
 };
 

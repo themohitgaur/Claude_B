@@ -1,13 +1,13 @@
 import path from "node:path";
 import ora from "ora";
 import { promises as fs } from "node:fs";
-import { scan } from "@claude-bootstrap/scanner";
+import { scan } from "@themohitgaur1/scanner";
 import {
   generateKnowledge,
   generateProjectJson,
   generateRootFiles,
   type WriteOptions,
-} from "@claude-bootstrap/generators";
+} from "@themohitgaur1/generators";
 import { ui } from "../ui.js";
 
 /**

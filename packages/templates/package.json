@@ -1,6 +1,6 @@
 {
-  "name": "@claude-bootstrap/templates",
-  "version": "1.0.0",
+  "name": "@themohitgaur1/templates",
+  "version": "1.0.1",
   "description": "Markdown + JSON templates for Claude Code workspaces (agents, commands, hooks, skills, MCP, knowledge).",
   "type": "module",
   "main": "./dist/index.js",
@@ -9,6 +9,7 @@
     ".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" }
   },
   "files": ["dist", "README.md"],
+  "publishConfig": { "access": "public" },
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts --clean",
     "dev": "tsup src/index.ts --format esm --dts --watch",

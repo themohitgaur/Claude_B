@@ -1,6 +1,6 @@
-# @claude-bootstrap/generators
+# @themohitgaur1/generators
 
-Pure functions that turn `ProjectMetadata` (from `@claude-bootstrap/scanner`) into files on disk:
+Pure functions that turn `ProjectMetadata` (from `@themohitgaur1/scanner`) into files on disk:
 
 | Generator | Output |
 |---|---|
@@ -15,4 +15,4 @@ Pure functions that turn `ProjectMetadata` (from `@claude-bootstrap/scanner`) in
 
 All generators accept `{ preserve?: boolean }` so `sync --preserve` won't clobber human-edited files.
 
-`recommendAgents(meta)` and `recommendSkills(meta)` produce sensible defaults from detected stack — the wizard pre-checks those in Inquirer.
+`recommendAgents(meta)` and `recommendSkills(meta)` produce sensible defaults from detected stack  Ethe wizard pre-checks those in Inquirer.

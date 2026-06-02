@@ -1,10 +1,10 @@
 import path from "node:path";
-import { MCP_CONFIG_JSON, render } from "@claude-bootstrap/templates";
+import { MCP_CONFIG_JSON, render } from "@themohitgaur1/templates";
 import { writeFileSafe, type McpChoice, type WriteOptions } from "../util.js";
 
 /**
  * MCP server configurations. Secrets are written as `${ENV_NAME}` placeholders
- * — the user wires the real values into their own env / secret manager.
+ *  Ethe user wires the real values into their own env / secret manager.
  */
 const SERVERS: Record<McpChoice, Record<string, unknown>> = {
   filesystem: {

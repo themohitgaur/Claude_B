@@ -1,6 +1,6 @@
 {
-  "name": "@claude-bootstrap/scanner",
-  "version": "1.0.0",
+  "name": "@themohitgaur1/scanner",
+  "version": "1.0.1",
   "description": "Scanner + Context Engine — detects frameworks, architecture, libraries, patterns. Core of claude-bootstrap.",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,6 +13,7 @@
     }
   },
   "files": ["dist", "README.md"],
+  "publishConfig": { "access": "public" },
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts --clean",
     "dev": "tsup src/index.ts --format esm --dts --watch",

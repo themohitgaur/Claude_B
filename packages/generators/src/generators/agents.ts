@@ -1,6 +1,6 @@
 import path from "node:path";
-import type { ProjectMetadata } from "@claude-bootstrap/scanner";
-import { AGENT_MD, render } from "@claude-bootstrap/templates";
+import type { ProjectMetadata } from "@themohitgaur1/scanner";
+import { AGENT_MD, render } from "@themohitgaur1/templates";
 import { writeFileSafe, type AgentChoice, type WriteOptions } from "../util.js";
 
 interface AgentDef {

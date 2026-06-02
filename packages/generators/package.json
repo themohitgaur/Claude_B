@@ -1,0 +1,29 @@
+{
+  "name": "@claude-bootstrap/generators",
+  "version": "1.0.0",
+  "description": "Generates Claude Code agents, commands, hooks, skills, MCP configs, and knowledge files from scanner metadata.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@claude-bootstrap/scanner": "workspace:*",
+    "@claude-bootstrap/templates": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "@types/node": "^22.7.0"
+  },
+  "license": "MIT"
+}

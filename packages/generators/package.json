@@ -16,8 +16,8 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@themohitgaur1/scanner": "workspace:*",
-    "@themohitgaur1/templates": "workspace:*"
+    "@themohitgaur1/scanner": "^1.0.1",
+    "@themohitgaur1/templates": "^1.0.1"
   },
   "publishConfig": { "access": "public" },
   "devDependencies": {

@@ -31,9 +31,9 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@themohitgaur1/scanner": "workspace:*",
-    "@themohitgaur1/generators": "workspace:*",
-    "@themohitgaur1/templates": "workspace:*",
+    "@themohitgaur1/scanner": "^1.0.1",
+    "@themohitgaur1/generators": "^1.0.1",
+    "@themohitgaur1/templates": "^1.0.1",
     "commander": "^12.1.0",
     "inquirer": "^12.11.1",
     "chalk": "^5.3.0",
